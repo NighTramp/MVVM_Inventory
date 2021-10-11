@@ -103,9 +103,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\Veiw\AuthView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MVVM\Model\User.cs" />
+    <Compile Include="MVVM\Veiw\AuthView.xaml.cs">
+      <DependentUpon>AuthView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\ViewModel\AuthViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -133,10 +142,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MVVM\Veiw\" />
-    <Folder Include="MVVM\ViewModel\" />
     <Folder Include="Resources\Fonts\" />
-    <Folder Include="Resources\Images\" />
     <Folder Include="Theme\" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +153,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DBI.mdf</DependentUpon>
     </Content>
+    <Resource Include="Resources\Images\bg.png" />
+    <Resource Include="Resources\Images\Logo.ico" />
+    <Resource Include="Resources\Images\Logo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
